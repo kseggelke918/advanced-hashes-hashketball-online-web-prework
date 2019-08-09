@@ -240,7 +240,6 @@ def winning_team
   game_hash.each do |home_away, team|
     team[:players].each do |player|
       home_team_points = home_team_points + home_away[player][:points]
-      binding.pry 
     end 
 
   end 
