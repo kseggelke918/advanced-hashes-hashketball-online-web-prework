@@ -234,7 +234,21 @@ def most_points_scored
   return players_name
 end       
       
-
+def winning_team
+  home_team_points = 0 
+  away_team_points = 0 
+  game_hash.each do |home_away, team|
+    team[:players].each do |player|
+      home_team_points = home_team_points + [:home][:players][:points]
+      away_team_points = away_team_points + [:away][:players][:points]
+       if home_team_points > away_team_points
+        winning_team = game_hash[:home][:team_name]
+      else  
+        winning_team = game_hash[:away][:team_name]
+       end 
+    end 
+  end 
+end 
       
 
 
