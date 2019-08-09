@@ -239,8 +239,7 @@ def winning_team
   away_team_points = 0 
   game_hash.each do |home_away, team|
     team.each do |player|
-      total = player[:points]
-      binding.pry 
+
     end 
   end 
 
