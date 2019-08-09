@@ -242,9 +242,9 @@ def winning_team
       game_hash[:home][:players].each do |player|
         home_team_points = home_team_points + player[:points]
           if home_team_points > away_team_points
-            game_hash[:home][:team_name]
+            return game_hash[:home][:team_name]
           else 
-            game_hash[:away][:team_name]
+            return game_hash[:away][:team_name]
           end 
       end 
   end 
